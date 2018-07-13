@@ -64,7 +64,7 @@ public class Response {
                 break;
         }
         headInfo.append(CRLF);
-        //2)  响应头(com.hcl.server.demo1.Response Head)
+        //  响应头(com.hcl.server.demo1.Response Head)
         headInfo.append("com.hcl.server.demo1.Server:bjsxt com.hcl.server.demo1.Server/0.0.1").append(CRLF);
         headInfo.append("Date:").append(new Date()).append(CRLF);
         headInfo.append("Content-type:text/html;charset=UTF-8").append(CRLF);//响应类型和编码格式

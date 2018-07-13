@@ -1,4 +1,4 @@
-package com.hcl.server.demo1;
+package com.hcl.server.demo4;
 
 import com.hcl.util.CloseUtil;
 
@@ -67,7 +67,7 @@ public class Response {
         //2)  响应头(com.hcl.server.demo1.Response Head)
         headInfo.append("com.hcl.server.demo1.Server:bjsxt com.hcl.server.demo1.Server/0.0.1").append(CRLF);
         headInfo.append("Date:").append(new Date()).append(CRLF);
-        headInfo.append("Content-type:text/html;charset=GBK").append(CRLF);//响应类型和编码格式
+        headInfo.append("Content-type:text/html;charset=UTF-8").append(CRLF);//响应类型和编码格式
         //正文长度 ：字节长度
         headInfo.append("Content-Length:").append(len).append(CRLF);
         headInfo.append(CRLF); //分隔符
