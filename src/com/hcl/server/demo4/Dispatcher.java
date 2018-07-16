@@ -36,7 +36,7 @@ public class Dispatcher implements Runnable {
                 servlet.service(req,rep);
             }
             rep.pushClient(code);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             this.code = 500;
         }

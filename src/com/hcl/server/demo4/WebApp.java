@@ -13,18 +13,19 @@ public class WebApp {
         mapping.put("/log","login");
         mapping.put("/reg","register");
 
-        Map<String,Servlet> servlet =context.getServlet();
-        servlet.put("login", new LoginServlet());
-        servlet.put("register", new RegisterServlet());
+        Map<String,String> servlet =context.getServlet();
+        servlet.put("login", "com.hcl.server.demo4.LoginServlet");
+        servlet.put("register", "com.hcl.server.demo4.RegisterServlet");
     }
 
-    public static Servlet getServlet(String url){
+    public static Servlet getServlet(String url) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
         //对域名检查并传送到servlet
         if((null==url)||(url=url.trim()).equals("")){
             return null;
         }
 
-        return context.getServlet().get(context.getMapping().get(url));
+        String name = context.getServlet().get(context.getMapping().get(url));//建立mapping与Servlet的映射
+        return (Servlet)Class.forName(name).newInstance();//需确保空构造存在
 
     }
 

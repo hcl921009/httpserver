@@ -18,6 +18,6 @@ public class LoginServlet extends Servlet{
         }
     }
     public boolean login(String name,String pwd){
-        return name.equals("123123") && pwd.equals("123456");
+        return name.equals("霍晨龙") && pwd.equals("123456");
     }
 }
