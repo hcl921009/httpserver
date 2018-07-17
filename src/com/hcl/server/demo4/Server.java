@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 /*
-    完善分发器，建立对应返回页面
+    完善分发器，建立对应返回页面，映射类使用完善为字符串Map存储，使用反射
  */
 
 public class Server {

@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 /*
-    多线程实现转发，建立返回分发类
+    多线程实现转发，实现网页分拣
  */
 
 public class Server {

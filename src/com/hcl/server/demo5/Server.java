@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 /*
-    完善分发器，建立对应返回页面
+    完善分发器，实现xml配置Mapping，使用SAX方式解析xml
  */
 
 public class Server {
