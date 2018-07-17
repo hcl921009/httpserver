@@ -23,10 +23,8 @@ public class WebApp {
         if((null==url)||(url=url.trim()).equals("")){
             return null;
         }
-
         String name = context.getServlet().get(context.getMapping().get(url));//建立mapping与Servlet的映射
-        return (Servlet)Class.forName(name).newInstance();//需确保空构造存在
-
+        return (Servlet)Class.forName(name).newInstance();//需确保空构造存在,否则会报错java.lang.InstantiationException
     }
 
 
